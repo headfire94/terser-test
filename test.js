@@ -1,3 +1,6 @@
+const minify = require('terser').minify
+
+const code = `
 class Test {
   update() {
     const some = wrap();
@@ -5,5 +8,10 @@ class Test {
     return merged;
   }
 }
+`
 
-module.exports = Test
+async function main() {
+  const res = await minify({ code })
+  console.error(res)
+}
+main().catch(e => console.error(e))

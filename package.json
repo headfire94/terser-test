@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "terser test.js"
+    "test": "node test.js"
   },
   "dependencies": {
     "terser": "5.2.1"
